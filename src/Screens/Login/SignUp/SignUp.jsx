@@ -50,7 +50,7 @@ const SignUp = () => {
           {/*------------------------Our Logo---------------------------- */}
 
           <Box display={["none", "none", "none", "block"]}>
-            <Image position="relative" left="-80px" src={Logo} />
+            <Image position="relative" left="-130px" src={Logo} />
           </Box>
 
           {/*------------------------SingUp form---------------------------- */}
