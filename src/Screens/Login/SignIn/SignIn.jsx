@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Image, Flex, Stack, Text, Link } from "@chakra-ui/react";
-import Karikatur from "../../../Svg/images/ourPn.png";
-import Background from "../../../Svg/images/bg.jfif";
-import Logo from "../../../Svg/Logo.svg";
+import Karikatur from "../../../Assets/images/ourPn.png";
+import Background from "../../../Assets/images/bg.jfif";
+import Logo from "../../../Assets/Svg/Logo.svg";
 import SignInForm from "./SignInForm";
 
 

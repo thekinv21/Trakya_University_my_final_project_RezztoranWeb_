@@ -41,7 +41,7 @@ const SignInForm = () => {
       </Stack>
 
       <FormControl>
-        <FormLabel fontWeight="400" fontSize="sm">
+        <FormLabel fontWeight="400" fontSize="12px">
           Username
         </FormLabel>
 
@@ -50,7 +50,7 @@ const SignInForm = () => {
             type="text"
             name="username"
             placeholder="Enter username.."
-            _placeholder={{ fontSize: "14px" }}
+            _placeholder={{ fontSize: "12px" }}
             bg="#fff"
             border="none"
             outline="none"
@@ -64,7 +64,7 @@ const SignInForm = () => {
       </FormControl>
 
       <FormControl>
-        <FormLabel fontWeight="400" fontSize="sm">
+        <FormLabel fontWeight="400" fontSize="12px">
           Password
         </FormLabel>
 
@@ -73,7 +73,7 @@ const SignInForm = () => {
             type={show ? "text" : "password"}
             name="password"
             placeholder="Enter Password.."
-            _placeholder={{ fontSize: "14px" }}
+            _placeholder={{ fontSize: "12px" }}
             bg="#fff"
             border="none"
             outline="none"
@@ -97,7 +97,7 @@ const SignInForm = () => {
           w="100%"
           pt="8px"
           justifyContent="flex-end"
-          fontSize="sm"
+          fontSize="12px"
           color={"gray.500"}
         >
           <Link justifyContent="flex-end">Forgot Password ?</Link>

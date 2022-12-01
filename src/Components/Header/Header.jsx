@@ -19,55 +19,11 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import User from "../../Svg/images/user1.png";
-import { BiRestaurant } from "react-icons/bi";
-import { FaStar, FaUser, FaHeart, FaSignOutAlt } from "react-icons/fa";
+import User from "../../Assets/images/user1.png";
+
+import { HeaderWebLinks, HeaderMenuLinks } from "../Links/Links";
 
 const Header = () => {
-  
-  const Links = [
-    {
-      name: "Ana Sayfa",
-      href: "#",
-    },
-    {
-      name: "Hakkımızda",
-      href: "#",
-    },
-    {
-      name: "Restoranlar",
-      href: "#",
-    },
-  ];
-
-  const MenuLinks = [
-    {
-      name: "Restoranlar",
-      href: "#",
-      icon: <BiRestaurant fontSize="18px" />,
-    },
-    {
-      name: "Favori Restoranlar",
-      href: "#",
-      icon: <FaHeart fontSize="18px" />,
-    },
-    {
-      name: "Bonus Puanlar",
-      href: "#",
-      icon: <FaStar fontSize="18px" />,
-    },
-    {
-      name: "Profilim",
-      href: "#",
-      icon: <FaUser fontSize="18px" />,
-    },
-    {
-      name: "Çikiş",
-      href: "/signin",
-      icon: <FaSignOutAlt fontSize="18px" />,
-    },
-  ];
-
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box>
@@ -75,9 +31,13 @@ const Header = () => {
         alignItems="center"
         justifyContent="space-between"
         h="16"
-        p="20px 20px"
+        p="40px"
+        position="fixed"
+        w="100%"
+        top="0px"
+        left="0px"
       >
-        {/*---------------------------Hamburger Menu Mobile Responsive olunca Çıkar------------------------ */}
+        {/*---------------------------Hamburger When Window was Mobile Responsive-------------------*/}
         <IconButton
           size="md"
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -86,14 +46,14 @@ const Header = () => {
           bg="orange"
         />
 
-        {/*---------------------------Logo yazisi------------------------ */}
+        {/*---------------------------Logo Title------------------------ */}
 
         <Heading size={["lg", "lg", "xl"]} color="orangered" cursor="pointer">
           REZZTORAN
         </Heading>
 
+        {/*--------------------------Header and Menu Links---------------------- */}
         <Flex alignItems="center">
-          {/*--------------------------Lİnks---------------------- */}
           <HStack spacing={8} alignItems={"center"}>
             <HStack
               as={"nav"}
@@ -101,26 +61,34 @@ const Header = () => {
               display={{ base: "none", md: "flex" }}
               pr="20px"
             >
-              {Links.map((link) => (
-                <Link
+              {HeaderWebLinks.map((webLink, index) => (
+                <HStack
+                  key={index}
                   color="#fff"
                   _hover={{
                     textDecoration: "none",
-                    p: "5px 30px",
+                    p: "5px 40px",
                     borderRadius: "5px",
                     transition: "all 0.5s",
                     bgGradient: "linear(to-r, red.500, yellow.500)",
                   }}
-                  key={link.name}
-                  href={link.href}
                 >
-                  {link.name}
-                </Link>
+                  <Text>{webLink.icon}</Text>
+
+                  <Link
+                    href={webLink.href}
+                    _hover={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    {webLink.name}
+                  </Link>
+                </HStack>
               ))}
             </HStack>
           </HStack>
 
-          {/*-----------------User Logo--------------------- */}
+          {/*-----------------User Logo and Menu Links--------------------- */}
 
           <Menu>
             <MenuButton>
@@ -135,7 +103,9 @@ const Header = () => {
 
             <MenuList>
               <MenuCommand textAlign="center">
-                <Text fontSize="sm">Vadim Kiniabaev</Text>
+                <Text fontSize="13px" color="#000">
+                  Vadim Kiniabaev
+                </Text>
                 <Text mt="5px" fontSize="xx-small">
                   Bonus Puanlarim : 100
                 </Text>
@@ -143,14 +113,14 @@ const Header = () => {
 
               <MenuDivider m="20px 10px" />
 
-              {MenuLinks.map((link) => (
+              {HeaderMenuLinks.map((menuLink, index) => (
                 <Link
-                  key={link.name}
-                  href={link.href}
+                  key={index}
+                  href={menuLink.href}
                   textDecoration="none"
                   fontSize="13px"
                 >
-                  <MenuItem icon={link.icon}>{link.name}</MenuItem>
+                  <MenuItem icon={menuLink.icon}>{menuLink.name}</MenuItem>
                 </Link>
               ))}
             </MenuList>
@@ -158,28 +128,40 @@ const Header = () => {
         </Flex>
       </Flex>
 
-      {/*---------------------------Mobile Responsive olduğunda Linkler------------------------ */}
+      {/*---------------------------Mobile Responsive Links and positions------------------------ */}
       {isOpen ? (
         <Box pb={4} display={{ md: "none" }}>
           <ScaleFade initialScale={0.5} in={isOpen}>
-            <Stack as={"nav"} spacing={4} alignItems="center" mt="20px">
-              {Links.map((link, index) => (
-                <Link
+            <Stack
+              w="100%"
+              position="absolute"
+              top="90px"
+              spacing={6}
+              alignItems="center"
+            >
+              {HeaderWebLinks.map((mobileLink, index) => (
+                <HStack
+                  key={index}
                   color="#fff"
                   _hover={{
-                    w: "100%",
-                    textAlign: "center",
                     textDecoration: "none",
-                    p: "5px 10px",
+                    p: "5px 80px",
                     borderRadius: "5px",
                     transition: "all 0.5s",
                     bgGradient: "linear(to-r, red.500, yellow.500)",
                   }}
-                  key={index}
-                  href={link.href}
                 >
-                  {link.name}
-                </Link>
+                  <Text>{mobileLink.icon}</Text>
+
+                  <Link
+                    href={mobileLink.href}
+                    _hover={{
+                      textDecoration: "none",
+                    }}
+                  >
+                    {mobileLink.name}
+                  </Link>
+                </HStack>
               ))}
             </Stack>
           </ScaleFade>

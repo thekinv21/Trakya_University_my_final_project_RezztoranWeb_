@@ -44,13 +44,13 @@ const SignUpForm = () => {
           Sign Up
         </Text>
 
-        <Text fontSize={"sm"} color={"gray.400"} align="start">
+        <Text fontSize='12px' color="gray.400" align="start">
           Create a new account...
         </Text>
       </Stack>
 
       <FormControl>
-        <FormLabel fontWeight="400" fontSize="sm">
+        <FormLabel fontWeight="400" fontSize="12px">
           Firstname
         </FormLabel>
 
@@ -59,7 +59,7 @@ const SignUpForm = () => {
             type="text"
             name="firstname"
             placeholder="Enter Firstname"
-            _placeholder={{ fontSize: "14px" }}
+            _placeholder={{ fontSize: "12px" }}
             bg="#fff"
             border="none"
             outline="none"
@@ -73,16 +73,16 @@ const SignUpForm = () => {
       </FormControl>
 
       <FormControl>
-        <FormLabel fontWeight="400" fontSize="sm">
+        <FormLabel fontWeight="400" fontSize="12px">
           E-mail adress
         </FormLabel>
 
         <InputGroup>
           <Input
-            type="text"
+            type="e-mail"
             name="username"
             placeholder="Enter E-mail.."
-            _placeholder={{ fontSize: "14px" }}
+            _placeholder={{ fontSize: "12px" }}
             bg="#fff"
             border="none"
             outline="none"
@@ -96,7 +96,7 @@ const SignUpForm = () => {
       </FormControl>
 
       <FormControl>
-        <FormLabel fontWeight="400" fontSize="sm">
+        <FormLabel fontWeight="400" fontSize="12px">
           Telephone Number
         </FormLabel>
 
@@ -105,7 +105,7 @@ const SignUpForm = () => {
             type="tel"
             name="tel_number"
             placeholder="Enter Phone Number"
-            _placeholder={{ fontSize: "14px" }}
+            _placeholder={{ fontSize: "12px" }}
             bg="#fff"
             border="none"
             outline="none"
@@ -119,7 +119,7 @@ const SignUpForm = () => {
       </FormControl>
 
       <FormControl>
-        <FormLabel fontWeight="400" fontSize="sm">
+        <FormLabel fontWeight="400" fontSize="12px">
           Password
         </FormLabel>
 
@@ -128,7 +128,7 @@ const SignUpForm = () => {
             type={show ? "text" : "password"}
             name="password"
             placeholder="Enter Password.."
-            _placeholder={{ fontSize: "14px" }}
+            _placeholder={{ fontSize: "12px" }}
             bg="#fff"
             border="none"
             outline="none"
