@@ -33,7 +33,7 @@ const SignInForm = () => {
     >
       <Stack align="center" pb="50px">
         <Heading fontSize="4xl" fontWeight="400" textAlign="center">
-          Sign in to your account
+          Sign in to your Account
         </Heading>
         <Text fontSize={"1xl"} color={"gray.400"} align="center">
           to enjoy all of our cool features ✌️

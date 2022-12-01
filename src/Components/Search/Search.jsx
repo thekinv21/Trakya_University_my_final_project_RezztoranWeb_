@@ -12,7 +12,6 @@ import {
 } from "@chakra-ui/react";
 import { FaSearch, FaDollarSign, FaStar } from "react-icons/fa";
 import { IoMdOptions } from "react-icons/io";
-
 import searchLogo from "../../Assets/Svg/searchLogo.svg";
 
 const Search = () => {

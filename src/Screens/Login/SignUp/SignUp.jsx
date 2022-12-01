@@ -34,7 +34,7 @@ const SignUp = () => {
             </Box>
             <Box position="relative" bottom="200px" left="-80px">
               <Stack>
-                <Text fontSize="5xl" fontWeight="300">
+                <Text fontSize="4xl" fontWeight="300">
                   Sign In
                 </Text>
                 <Box textAlign="end" fontSize="sm" pl="20px">
@@ -50,7 +50,7 @@ const SignUp = () => {
           {/*------------------------Our Logo---------------------------- */}
 
           <Box display={["none", "none", "none", "block"]}>
-            <Image position="relative" left="-110px" src={Logo} />
+            <Image position="relative" left="-120px" src={Logo} />
           </Box>
 
           {/*------------------------SingUp form---------------------------- */}

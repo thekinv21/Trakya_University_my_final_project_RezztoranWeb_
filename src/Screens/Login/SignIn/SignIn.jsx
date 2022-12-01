@@ -35,10 +35,10 @@ const SignIn = () => {
             </Box>
             <Box position="relative" bottom="200px" left="-80px">
               <Stack>
-                <Text fontSize="5xl" fontWeight="300">
+                <Text fontSize="4xl" fontWeight="300">
                   Sign up
                 </Text>
-                <Box textAlign="end" fontSize="sm">
+                <Box textAlign="end" fontSize="sm" pl="20px">
                   <Text pb="5px">Create Account.....</Text>
                   <Link href="/signup" color="#4462f2">
                     Sign Up now!
@@ -51,7 +51,7 @@ const SignIn = () => {
           {/*------------------------Our Logo---------------------------- */}
 
           <Box display={["none", "none", "none", "block"]}>
-            <Image position="relative" left="-130px" src={Logo} />
+            <Image position="relative" left="-120px" src={Logo} />
           </Box>
 
           {/*------------------------SingIn form---------------------------- */}
