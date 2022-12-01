@@ -5,7 +5,7 @@ import Search from "../../Components/Search/Search";
 
 const Landing = () => {
   return (
-    <Box w={"100vw"} h={"100vh"} bgColor={"#1E1E1E"}>
+    <Box w={"100vw"} h={"100vh"} bgColor="#1E1E1E">
       <Header />
       <Search/>
     </Box>

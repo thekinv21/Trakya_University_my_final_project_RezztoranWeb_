@@ -39,7 +39,7 @@ const SignIn = () => {
                   Sign up
                 </Text>
                 <Box textAlign="end" fontSize="sm">
-                  <Text pb="5px">Don't have Account..</Text>
+                  <Text pb="5px">Create Account.....</Text>
                   <Link href="/signup" color="#4462f2">
                     Sign Up now!
                   </Link>

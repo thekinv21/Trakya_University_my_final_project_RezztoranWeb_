@@ -4,7 +4,6 @@ import {
   Flex,
   IconButton,
   useDisclosure,
-  Heading,
   HStack,
   Link,
   Menu,
@@ -20,6 +19,7 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import User from "../../Assets/images/user1.png";
+import RezztoranLogo from "../../Assets/Svg/REZZ.svg";
 
 import { HeaderWebLinks, HeaderMenuLinks } from "../Links/Links";
 
@@ -31,26 +31,26 @@ const Header = () => {
         alignItems="center"
         justifyContent="space-between"
         h="16"
-        p="40px"
+        p="35px"
         position="fixed"
         w="100%"
         top="0px"
         left="0px"
       >
-        {/*---------------------------Hamburger When Window was Mobile Responsive-------------------*/}
+        {/*---------------------------Hamburger Menu When Window was Mobile Responsive------------------------ */}
         <IconButton
           size="md"
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
           display={{ md: "none" }}
           onClick={isOpen ? onClose : onOpen}
-          bg="orange"
+          bg="orangered"
+          color='#ddd'
+          _hover={ {bg : 'orange'}}
         />
 
-        {/*---------------------------Logo Title------------------------ */}
+        {/*---------------------------Rezztoran Logo ------------------------ */}
 
-        <Heading size={["lg", "lg", "xl"]} color="orangered" cursor="pointer">
-          REZZTORAN
-        </Heading>
+        <Image w={['130px' ,'160px','160px','220px']} src={RezztoranLogo} cursor="pointer" />
 
         {/*--------------------------Header and Menu Links---------------------- */}
         <Flex alignItems="center">
@@ -135,7 +135,7 @@ const Header = () => {
             <Stack
               w="100%"
               position="absolute"
-              top="90px"
+              top="120px"
               spacing={6}
               alignItems="center"
             >

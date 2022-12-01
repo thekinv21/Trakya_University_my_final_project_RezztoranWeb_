@@ -37,8 +37,8 @@ const SignUp = () => {
                 <Text fontSize="5xl" fontWeight="300">
                   Sign In
                 </Text>
-                <Box textAlign="end" fontSize="sm">
-                  <Text pb="5px">You have Account?</Text>
+                <Box textAlign="end" fontSize="sm" pl="20px">
+                  <Text pb="5px">if You have Account.....</Text>
                   <Link href="/signin" color="#4462f2">
                     Sign In!
                   </Link>
