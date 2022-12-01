@@ -40,17 +40,22 @@ const Header = () => {
         {/*---------------------------Hamburger Menu When Window was Mobile Responsive------------------------ */}
         <IconButton
           size="md"
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon fontSize="18px" />}
           display={{ md: "none" }}
           onClick={isOpen ? onClose : onOpen}
           bg="orangered"
-          color='#ddd'
-          _hover={ {bg : 'orange'}}
+          borderRadius="50%"
+          color="#ddd"
+          _hover={{ bg: "orange" }}
         />
 
         {/*---------------------------Rezztoran Logo ------------------------ */}
 
-        <Image w={['130px' ,'160px','160px','220px']} src={RezztoranLogo} cursor="pointer" />
+        <Image
+          w={["130px", "160px", "160px", "220px"]}
+          src={RezztoranLogo}
+          cursor="pointer"
+        />
 
         {/*--------------------------Header and Menu Links---------------------- */}
         <Flex alignItems="center">
@@ -130,14 +135,18 @@ const Header = () => {
 
       {/*---------------------------Mobile Responsive Links and positions------------------------ */}
       {isOpen ? (
-        <Box pb={4} display={{ md: "none" }}>
+        <Box pb={5} display={{ md: "none" }}>
           <ScaleFade initialScale={0.5} in={isOpen}>
             <Stack
               w="100%"
+              h="180px"
               position="absolute"
-              top="120px"
+              top="80px"
               spacing={6}
               alignItems="center"
+              justifyContent="center"
+              bg={"orange.600"}
+              borderRadius="5px"
             >
               {HeaderWebLinks.map((mobileLink, index) => (
                 <HStack
@@ -148,7 +157,7 @@ const Header = () => {
                     p: "5px 80px",
                     borderRadius: "5px",
                     transition: "all 0.5s",
-                    bgGradient: "linear(to-r, red.500, yellow.500)",
+                    bgColor: "green.500",
                   }}
                 >
                   <Text>{mobileLink.icon}</Text>
