@@ -20,8 +20,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import User from "../../Assets/images/user1.png";
 import RezztoranLogo from "../../Assets/Svg/REZZ.svg";
-
-import { HeaderWebLinks, HeaderMenuLinks } from "../../Common/Links/Links";
+import { HeaderWebLinks, HeaderMenuLinks } from "../Links/Links";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
