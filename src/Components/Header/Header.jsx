@@ -21,7 +21,7 @@ import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import User from "../../Assets/images/user1.png";
 import RezztoranLogo from "../../Assets/Svg/REZZ.svg";
 
-import { HeaderWebLinks, HeaderMenuLinks } from "../Links/Links";
+import { HeaderWebLinks, HeaderMenuLinks } from "../../Common/Links/Links";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -30,12 +30,13 @@ const Header = () => {
       <Flex
         alignItems="center"
         justifyContent="space-between"
-        h="16"
+        h="10vh"
         p="35px"
         position="fixed"
         w="100%"
         top="0px"
         left="0px"
+        bgColor="#16222a"
       >
         {/*---------------------------Hamburger Menu When Window was Mobile Responsive------------------------ */}
         <IconButton
@@ -141,12 +142,12 @@ const Header = () => {
               w="100%"
               h="180px"
               position="absolute"
-              top="80px"
+              top="70px"
               spacing={6}
               alignItems="center"
               justifyContent="center"
               bg={"orange.600"}
-              borderRadius="5px"
+              
             >
               {HeaderWebLinks.map((mobileLink, index) => (
                 <HStack

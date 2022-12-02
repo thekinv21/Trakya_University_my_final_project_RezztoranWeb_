@@ -44,7 +44,7 @@ export const HeaderMenuLinks = [
   },
   {
     name: "Profilim",
-    href: "#",
+    href: "/profile",
     icon: <FaUser fontSize="18px" />,
   },
   {
