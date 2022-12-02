@@ -28,7 +28,6 @@ const Navbar = () => {
         w="100%"
         top="0px"
         left="0px"
-        bgColor="#16222a"
       >
         {/*---------------------------Logo ------------------------ */}
 
@@ -69,7 +68,7 @@ const Navbar = () => {
               </Text>
             </MenuCommand>
 
-            <MenuDivider m="20px 10px" />
+            <MenuDivider m="10px 10px" />
 
             {HeaderMenuLinks.map((menuLink, index) => (
               <Link
@@ -78,7 +77,9 @@ const Navbar = () => {
                 textDecoration="none"
                 fontSize="13px"
               >
-                <MenuItem icon={menuLink.icon}>{menuLink.name}</MenuItem>
+                <MenuItem p="10px 20px" icon={menuLink.icon}>
+                  {menuLink.name}
+                </MenuItem>
               </Link>
             ))}
           </MenuList>
