@@ -1,14 +1,14 @@
 import React from "react";
 import { Box, Image, Flex, Stack, Text, Link } from "@chakra-ui/react";
 import Karikatur from "../../../Assets/images/ourPn.png";
-import Background from "../../../Assets/images/bg.jfif";
+import Background from "../../../Assets/images/Background.png";
 import Logo from "../../../Assets/Svg/Logo.svg";
 import SignUpForm from "./SignUpForm";
 
 const SignUp = () => {
   return (
-    <Box w="100vw" h="100vh" bgImage={Background} color="#fff">
-      <Box w="100%" h="100%" bgColor="#14162E" opacity="0.9">
+    <Box w="100vw" h="100vh" bgColor="#14162E" color="#fff">
+      <Box w="100%" h="100%" bgImage={Background}>
         {/*-------------------Mobil Tablet Laptop vb Responsive------------------------ */}
         <Flex
           w="100%"
@@ -37,7 +37,7 @@ const SignUp = () => {
                 <Text fontSize="4xl" fontWeight="300">
                   Sign In
                 </Text>
-                <Box textAlign="end" fontSize="sm" pl="20px">
+                <Box textAlign="end" fontSize="sm" pl="10px">
                   <Text pb="5px">if You have Account.....</Text>
                   <Link href="/signin" color="#4462f2">
                     Sign In!

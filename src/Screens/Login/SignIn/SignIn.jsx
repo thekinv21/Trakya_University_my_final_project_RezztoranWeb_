@@ -1,15 +1,15 @@
 import React from "react";
 import { Box, Image, Flex, Stack, Text, Link } from "@chakra-ui/react";
 import Karikatur from "../../../Assets/images/ourPn.png";
-import Background from "../../../Assets/images/bg.jfif";
+import Background from "../../../Assets/images/Background.png";
 import Logo from "../../../Assets/Svg/Logo.svg";
 import SignInForm from "./SignInForm";
 
 
 const SignIn = () => {
   return (
-    <Box w="100vw" h="100vh" bgImage={Background} color="#fff">
-      <Box w="100%" h="100%" bgColor="#14162E" opacity="0.9">
+    <Box w="100vw" h="100vh" bgColor="#14162E" color="#fff">
+      <Box w="100%" h="100%" bgImage={Background}>
         {/*-------------------Mobil Tablet Laptop vb Responsive------------------------ */}
         <Flex
           w="100%"
@@ -51,7 +51,7 @@ const SignIn = () => {
           {/*------------------------Our Logo---------------------------- */}
 
           <Box display={["none", "none", "none", "block"]}>
-            <Image position="relative" left="-120px" src={Logo} />
+            <Image position="relative" left="-150px" src={Logo} />
           </Box>
 
           {/*------------------------SingIn form---------------------------- */}
