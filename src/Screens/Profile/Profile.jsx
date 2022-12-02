@@ -6,7 +6,7 @@ import Background from "../../Assets/images/Background.png";
 const Profile = () => {
   return (
     <Fragment>
-      <Box w="100vw" h="100vh" bgColor="#14162E" bgImage={Background} color='#fff'>
+      <Box w="100vw" h="100vh" bgColor="#14162E" bgImage={Background}>
         <Navbar />
       </Box>
     </Fragment>
