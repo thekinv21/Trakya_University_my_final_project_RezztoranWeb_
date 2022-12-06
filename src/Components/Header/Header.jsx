@@ -20,7 +20,7 @@ import {
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import User from "../../Assets/images/user1.png";
 import RezztoranLogo from "../../Assets/Svg/REZZ.svg";
-import { HeaderWebLinks, HeaderMenuLinks } from "../Links/Links";
+import { HeaderWebLinks, NavbarMenuLinks } from "../Links/Links";
 
 const Header = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -117,7 +117,7 @@ const Header = () => {
 
               <MenuDivider m="20px 10px" />
 
-              {HeaderMenuLinks.map((menuLink, index) => (
+              {NavbarMenuLinks.map((menuLink, index) => (
                 <Link
                   key={index}
                   href={menuLink.href}
@@ -144,7 +144,7 @@ const Header = () => {
               spacing={6}
               alignItems="center"
               justifyContent="center"
-              bg='#e43a15'
+              bg="#e43a15"
             >
               {HeaderWebLinks.map((mobileLink, index) => (
                 <HStack
