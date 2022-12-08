@@ -14,8 +14,13 @@ import {
   MenuItem,
   Image,
   Text,
-  ScaleFade,
   Stack,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerOverlay,
+  DrawerHeader,
+  DrawerCloseButton,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import User from "../../Assets/images/user1.png";
@@ -42,10 +47,10 @@ const Header = () => {
         {/*---------------------------Hamburger Menu When Window was Mobile Responsive------------------------ */}
         <IconButton
           size="md"
-          icon={isOpen ? <CloseIcon /> : <HamburgerIcon fontSize="18px" />}
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon fontSize="19px" />}
           display={{ md: "none" }}
           onClick={isOpen ? onClose : onOpen}
-          bg="orangered"
+          bg="gray.500"
           borderRadius="50%"
           color="#ddd"
           _hover={{ bg: "orange" }}
@@ -95,7 +100,7 @@ const Header = () => {
             </HStack>
           </HStack>
 
-          {/*-----------------User Logo and Menu Links--------------------- */}
+          {/*--------------------------User Logo and Menu Links----------------------- */}
 
           <Menu>
             <MenuButton>
@@ -137,44 +142,63 @@ const Header = () => {
 
       {/*---------------------------Mobile Responsive Links and positions------------------------ */}
       {isOpen ? (
-        <Box pb={5} display={{ md: "none" }}>
-          <ScaleFade initialScale={0.5} in={isOpen}>
-            <Stack
-              w="100%"
-              h="180px"
-              position="absolute"
-              top="70px"
-              spacing={6}
-              alignItems="center"
-              justifyContent="center"
-              bg="#36454F"
-            >
-              {HeaderWebLinks.map((mobileLink, index) => (
-                <HStack
-                  key={index}
-                  color="#fff"
-                  _hover={{
-                    textDecoration: "none",
-                    p: "5px 80px",
-                    borderRadius: "5px",
-                    transition: "all 0.5s",
-                    bgGradient: "linear(to-r, red.500, yellow.500)",
-                  }}
-                >
-                  <Text>{mobileLink.icon}</Text>
+        <Box display={{ md: "none" }}>
+          <Drawer
+            isOpen={isOpen}
+            placement="left"
+            onClose={onClose}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+            justifyItems={"center"}
+          >
+            <DrawerOverlay />
+            <DrawerContent bg="#36454F" w="100%" h="100%" alignItems="center">
+              <DrawerCloseButton color="#fff" />
 
-                  <Link
-                    href={mobileLink.href}
-                    _hover={{
-                      textDecoration: "none",
-                    }}
-                  >
-                    {mobileLink.name}
-                  </Link>
-                </HStack>
-              ))}
-            </Stack>
-          </ScaleFade>
+              <DrawerHeader cursor="pointer">
+                <Link href="/landing">
+                  <Image src={RezztoranLogo} />
+                </Link>
+              </DrawerHeader>
+
+              <DrawerBody>
+                <Stack
+                  w="100%"
+                  h="100%"
+                  direction="column"
+                  alignItems={"center"}
+                  justifyContent="center"
+                  spacing="8"
+                >
+                  {HeaderWebLinks.map((mobileLink, index) => (
+                    <HStack
+                      key={index}
+                      color="#fff"
+                      _hover={{
+                        textDecoration: "none",
+                        p: "5px 80px",
+                        borderRadius: "5px",
+                        transition: "all 0.5s",
+                        bgGradient: "linear(to-r, red.500, yellow.500)",
+                      }}
+                    >
+                      <Text>{mobileLink.icon}</Text>
+
+                      <Link
+                        href={mobileLink.href}
+                        _hover={{
+                          textDecoration: "none",
+                        }}
+                      >
+                        {mobileLink.name}
+                      </Link>
+                    </HStack>
+                  ))}
+                </Stack>
+              </DrawerBody>
+            </DrawerContent>
+          </Drawer>
         </Box>
       ) : null}
     </Box>
