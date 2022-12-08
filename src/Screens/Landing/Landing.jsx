@@ -6,9 +6,11 @@ import Background from "../../Assets/images/Background.png";
 import RestoransList from "../../Components/RestoransList/RestoransList";
 import AboutUs from "../../Components/AboutUs/AboutUs";
 import Footer from "../../Common/Footer/Footer";
+import Quetions from "../../Components/Questions/Quetions";
 const Landing = () => {
   return (
     <Fragment>
+      <Header />
       <Box
         maxW="100vw"
         minH="1400px"
@@ -17,15 +19,14 @@ const Landing = () => {
         bgImage={Background}
         overflowY="hidden"
       >
-        <Header />
-
         <Stack spacing={20} direction="column" pt="8rem" h="auto">
           <Search />
           <RestoransList />
           <AboutUs />
-          <Footer />
+          <Quetions />
         </Stack>
       </Box>
+      <Footer />
     </Fragment>
   );
 };
