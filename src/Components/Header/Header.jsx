@@ -35,6 +35,9 @@ const Header = () => {
         w="100%"
         top="0px"
         left="0px"
+        bg="#36454F"
+        boxShadow="0 -1px 6px -1px rgba(0, 0, 0, 0.1)"
+        zIndex="999"
       >
         {/*---------------------------Hamburger Menu When Window was Mobile Responsive------------------------ */}
         <IconButton
@@ -144,7 +147,7 @@ const Header = () => {
               spacing={6}
               alignItems="center"
               justifyContent="center"
-              bg="#e43a15"
+              bg="#36454F"
             >
               {HeaderWebLinks.map((mobileLink, index) => (
                 <HStack
@@ -155,7 +158,7 @@ const Header = () => {
                     p: "5px 80px",
                     borderRadius: "5px",
                     transition: "all 0.5s",
-                    bgColor: "green.500",
+                    bgGradient: "linear(to-r, red.500, yellow.500)",
                   }}
                 >
                   <Text>{mobileLink.icon}</Text>
