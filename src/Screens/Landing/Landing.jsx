@@ -1,15 +1,26 @@
 import React from "react";
-import { Box } from "@chakra-ui/react";
+import { Box, Stack } from "@chakra-ui/react";
 import Header from "../../Components/Header/Header";
 import Search from "../../Components/Search/Search";
 import Background from "../../Assets/images/Background.png";
+import RestoransList from "../../Components/RestoransList/RestoransList";
 
 const Landing = () => {
   return (
-    <Box w="100vw" h="100vh" bgColor="#B2BEB5" bgImage={Background}>
+    <Stack
+      spacing="160"
+      direction="column"
+      w="100vw"
+      h="100vh"
+      maxH='auto'
+      bgColor="#B2BEB5"
+      bgImage={Background}
+    >
       <Header />
       <Search />
-    </Box>
+      <RestoransList />
+
+    </Stack>
   );
 };
 
