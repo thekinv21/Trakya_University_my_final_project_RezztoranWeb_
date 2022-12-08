@@ -28,7 +28,7 @@ const RestoransList = () => {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 3,
+    slidesToShow: 4,
     speed: 500,
     autoplay: true,
     autoplaySpeed: 1500,
@@ -36,7 +36,7 @@ const RestoransList = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -61,11 +61,11 @@ const RestoransList = () => {
 
   return (
     <Stack w="100%" textAlign="center" spacing="12">
-      <Heading color="rgb(0,0,0,0.6)" fontWeight="600" textAlign="center">
+      <Heading color="rgb(0,0,0,0.6)" fontWeight="600">
         POPÜLER RESTORANLAR
       </Heading>
 
-      <Stack w="100%" p="0px 10%" direction={["column", "column", "column"]}>
+      <Stack w="100%" p="0px 6%" direction={["column", "column", "column"]}>
         {/*------------------------------Slider Container----------------------------- */}
         <Slider {...sliderSettings}>
           {resData.map((restoran) => (
@@ -78,7 +78,7 @@ const RestoransList = () => {
               overflow="hidden"
               key={restoran.id}
               cursor="pointer"
-              bg="#fff"
+              bg="#ddd"
             >
               {/*------------------------------Restorants Image----------------------------- */}
               <Image
