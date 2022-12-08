@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 const RestoransList = () => {
   const [resData, setresData] = useState([]);
 
-  //----------------Check data with Axios------------------
+  //----------------------------------Check data with Axios-----------------------------------
   useEffect(() => {
     async function fetchData() {
       const { data: mydata } = await axios.get(
@@ -22,7 +22,7 @@ const RestoransList = () => {
     fetchData();
   }, []);
 
-  //--------------Slider Ayarları için----------------
+  //----------------------------------Slider Ayarları için-----------------------------------
   const sliderSettings = {
     className: "center",
     centerMode: true,
@@ -36,13 +36,13 @@ const RestoransList = () => {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 4,
           slidesToScroll: 1,
           infinite: true,
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -65,8 +65,8 @@ const RestoransList = () => {
         POPÜLER RESTORANLAR
       </Heading>
 
-      <Stack w="100%" p="0px 6%" direction={["column", "column", "column"]}>
-        {/*------------------------------Slider Container----------------------------- */}
+      <Stack w="100%" p="0px 7%" direction={["column", "column", "column"]}>
+        {/*---------------------------------------------Slider Container-------------------------------------------- */}
         <Slider {...sliderSettings}>
           {resData.map((restoran) => (
             <Box
@@ -80,7 +80,7 @@ const RestoransList = () => {
               cursor="pointer"
               bg="#ddd"
             >
-              {/*------------------------------Restorants Image----------------------------- */}
+              {/*-----------------------------------------Restorants Image---------------------------------------------- */}
               <Image
                 w="400px"
                 maxW="100%"
@@ -105,7 +105,7 @@ const RestoransList = () => {
                   </Box>
                 </Box>
 
-                {/*------------------------------Restorant İnformation----------------------------- */}
+                {/*-----------------------------------------Restorant İnformation-------------------------------------------- */}
 
                 <Box
                   mt="1"
