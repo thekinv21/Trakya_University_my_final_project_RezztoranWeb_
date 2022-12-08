@@ -15,7 +15,7 @@ import { ProfileMenuLinks } from "../Links/Links";
 const ProfileCard = () => {
   return (
     <Card
-      bg="#c1c1c1"
+      bg="#fff"
       boxShadow="rgb(51 51 51 / 10%) 0px 1px 4px"
       minW="290px"
       maxW="300px"
@@ -56,7 +56,7 @@ const ProfileCard = () => {
                 color: "#FAC050",
               }}
             >
-              <ListItem pr="10px" color="#000">
+              <ListItem pr="10px" color="rgba(0,0,0,0.7)">
                 {" "}
                 {cardLink.icon}
               </ListItem>

@@ -1,0 +1,79 @@
+[
+  {
+    "id": 0,
+    "title": "Elit Restorant",
+    "imgURL": "https://www.thegalataistanbul.com/wp-content/uploads/sites/73/2021/03/Mesai7-1500x999.jpg",
+    "city": "İstanbul ",
+    "category": "Et",
+    "star": 1,
+    "price": 3,
+    "most_rated": 2,
+    "liked": false
+  },
+  {
+    "id": 1,
+    "title": "Osteria Francescana",
+    "imgURL": "https://www.mewithmysuitcase.com/wp-content/uploads/2019/03/OsteriaFrancescana28529.jpg",
+    "city": "Sivas ",
+    "category": "Et",
+    "star": 4,
+    "price": 1,
+    "most_rated": 4,
+    "liked": false
+  },
+  {
+    "id": 2,
+    "title": "Mikla",
+    "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC7PIP14FbifDPk59UecDOUcY2rCi9MYLYvjuBYT70opjdc_XAjs7w-DKWBBB2OGDmIwE&usqp=CAU",
+    "city": "Sivas ",
+    "category": "Et",
+    "star": 3.5,
+    "price": 5,
+    "most_rated": 1,
+    "liked": false
+  },
+  {
+    "id": 3,
+    "title": "Neolokal",
+    "imgURL": "https://lh3.googleusercontent.com/p/AF1QipMlOLvEGmMHQImIGH8oBlcCAO7XNw7e5_-Y474O=s680-w680-h510",
+    "city": "Afyonkarahisar",
+    "category": "Çin Mutfağı",
+    "star": 4,
+    "price": 2,
+    "most_rated": 2,
+    "liked": false
+  },
+  {
+    "id": 4,
+    "title": "Zuma",
+    "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRC7PIP14FbifDPk59UecDOUcY2rCi9MYLYvjuBYT70opjdc_XAjs7w-DKWBBB2OGDmIwE&usqp=CAU",
+    "city": "Afyonkarahisar",
+    "category": "Pastane",
+    "star": 4,
+    "price": 3,
+    "most_rated": 1,
+    "liked": false
+  },
+  {
+    "id": 5,
+    "title": "Ent Restaurant",
+    "imgURL": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTxBhhZ-RSLWYnYW8-8DPhku0FegwHD4VudQzsZLA3a_GgaVfQ2GLQpwuxlyIaZbWZuDo&usqp=CAU",
+    "city": "Edirne",
+    "category": "İtalyan Mutfağı",
+    "star": 2,
+    "price": 3,
+    "most_rated": 5,
+    "liked": false
+  },
+  {
+    "id": 6,
+    "title": "Mürver Restaurant Novotel",
+    "imgURL": "http://www.murverrestaurant.com/wp-content/uploads/2019/11/murver_yeni_30.jpg",
+    "city": "Edirne",
+    "category": "Amerikan Mutfağı",
+    "star": 3,
+    "price": 1,
+    "most_rated": 4,
+    "liked": false
+  }
+]

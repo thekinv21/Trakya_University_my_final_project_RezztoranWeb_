@@ -25,17 +25,21 @@ const Search = () => {
       {/*------------------Logo and Label Container----------------- */}
 
       <Stack
-        display='flex'
-        justifyContent='center'
+        display="flex"
+        justifyContent="center"
         flexDirection={["column", "column", "column", "row"]}
         alignItems="center"
         mb={["30px", "20px", "40px", "20px"]}
-        w='100%'
+        w="100%"
       >
         <Image pr="5px" src={searchLogo} alt="search-logo" />
 
-        <Heading fontWeight="400" color='#ddd' size={["lg", "2xl", "lg", "3xl"]}>
-          Dilediğin Restorani Seç
+        <Heading
+          fontWeight="600"
+          color="rgb(0,0,0,0.6)"
+          size={["lg", "2xl", "lg", "2xl"]}
+        >
+          RESTORAN SEÇ
         </Heading>
       </Stack>
 
@@ -50,7 +54,7 @@ const Search = () => {
             fontSize={["12px", "15px", "16px"]}
           />
           <InputRightElement width={["2.5rem", "5.5rem", "4.5rem"]}>
-            <FaSearch fontSize="18px" cursor="pointer" color="#fff"/>
+            <FaSearch fontSize="18px" cursor="pointer" color="#fff" />
           </InputRightElement>
         </InputGroup>
 
@@ -68,7 +72,7 @@ const Search = () => {
             size="md"
             type="datetime-local"
             fontSize={"12px"}
-            color='#ddd'
+            color="#ddd"
           />
 
           {/*---------------Hotel,Restaurant Money input------------------ */}
@@ -93,11 +97,10 @@ const Search = () => {
 
           <IconButton
             w={["100%", "100%", "30%", "30%"]}
-            bg='rgb(248, 179, 51)'
+            bg="rgb(248, 179, 51)"
             aria-label="Filtrele"
             fontSize="2xl"
-            _hover={{bg : 'orangered'}}
-            
+            _hover={{ bg: "orangered" }}
             icon={<IoMdOptions color="#fff" cursor="pointer" />}
           />
         </Flex>

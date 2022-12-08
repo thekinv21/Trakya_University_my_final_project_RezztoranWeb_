@@ -29,8 +29,8 @@ const ProfileEditCard = () => {
         </Heading>
 
         <Card
-          bg="#c1c1c1"
-          color="#fff"
+          bg="#fff"
+          color="#000"
           boxShadow="rgb(51 51 51 / 10%) 0px 1px 4px"
           minW={["320px", "450px", "440px", "570px"]}
           maxW={["340px", "340px", "340px", "570px"]}
@@ -80,15 +80,15 @@ const ProfileEditCard = () => {
               w="45%"
               variant="flushed"
               placeholder="Name"
-              _placeholder={{ fontSize: "12px", color: "#fff" }}
+              _placeholder={{ fontSize: "12px" }}
               fontSize="12px"
-              focusBorderColor="lime"
+              focusBorderColor="orangered"
             />
             <Input
               w="45%"
               variant="flushed"
               placeholder="Surname"
-              _placeholder={{ fontSize: "12px", color: "#fff" }}
+              _placeholder={{ fontSize: "12px" }}
               fontSize="12px"
               focusBorderColor="orangered"
             />
@@ -101,7 +101,7 @@ const ProfileEditCard = () => {
               variant="flushed"
               w="20%"
               fontSize="12px"
-              focusBorderColor="lime"
+              focusBorderColor="orangered"
             >
               <option bg="gray">+905</option>
             </Select>
@@ -110,9 +110,9 @@ const ProfileEditCard = () => {
               w="45%"
               variant="flushed"
               placeholder="Phone number"
-              _placeholder={{ fontSize: "12px", color: "#fff" }}
+              _placeholder={{ fontSize: "12px" }}
               fontSize="12px"
-              focusBorderColor="lime"
+              focusBorderColor="orangered"
             />
           </Stack>
 
@@ -123,7 +123,7 @@ const ProfileEditCard = () => {
               variant="flushed"
               w="40%"
               fontSize="12px"
-              focusBorderColor="lime"
+              focusBorderColor="orangered"
             >
               <option>Türkçe</option>
               <option>English</option>
@@ -160,7 +160,7 @@ const ProfileEditCard = () => {
         </Heading>
 
         <Card
-          bg="#c1c1c1"
+          bg="#fff"
           boxShadow="rgb(51 51 51 / 10%) 0px 1px 4px"
           minW={["320px", "450px", "440px", "570px"]}
           maxW={["340px", "100%", "340px", "570px"]}
