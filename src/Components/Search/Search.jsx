@@ -21,7 +21,6 @@ const Search = () => {
       alignItems={["center", "center", "center"]}
       justifyContent="center"
       color="#000"
-      pt="10rem"
     >
       {/*------------------Logo and Label Container----------------- */}
 
