@@ -14,7 +14,7 @@ import {
 import User from "../../Assets/images/user1.png";
 import RezztoranLogo from "../../Assets/Svg/REZZ.svg";
 import searchLogo from "../../Assets/Svg/searchLogo.svg";
-import { HeaderMenuLinks } from "../Links/Links";
+import { NavbarMenuLinks } from "../../Components/Links/Links";
 
 const Navbar = () => {
   return (
@@ -22,12 +22,15 @@ const Navbar = () => {
       <Flex
         alignItems="center"
         justifyContent="space-between"
-        h="10vh"
+        h="8vh"
         p="35px"
         position="fixed"
         w="100%"
         top="0px"
         left="0px"
+        bg="#36454F"
+        boxShadow="0 -1px 6px -1px rgba(0, 0, 0, 0.1)"
+        zIndex="999"
       >
         {/*---------------------------Logo ------------------------ */}
 
@@ -59,18 +62,18 @@ const Navbar = () => {
           </MenuButton>
 
           <MenuList>
-            <MenuCommand textAlign="center">
+            <MenuCommand textAlign="center" mt="5px">
               <Text fontSize="13px" color="#000">
                 Vadim Kiniabaev
               </Text>
-              <Text mt="5px" fontSize="xx-small">
+              <Text mt="2px" fontSize="xx-small">
                 Bonus Puanlarim : 100
               </Text>
             </MenuCommand>
 
-            <MenuDivider m="10px 10px" />
+            <MenuDivider mt="15px" />
 
-            {HeaderMenuLinks.map((menuLink, index) => (
+            {NavbarMenuLinks.map((menuLink, index) => (
               <Link
                 key={index}
                 href={menuLink.href}

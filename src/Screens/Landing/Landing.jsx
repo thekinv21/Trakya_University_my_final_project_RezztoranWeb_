@@ -6,7 +6,7 @@ import Background from "../../Assets/images/Background.png";
 
 const Landing = () => {
   return (
-    <Box w="100vw" h="100vh" bgColor="#14162E" bgImage={Background}>
+    <Box w="100vw" h="100vh" bgColor="#B2BEB5" bgImage={Background}>
       <Header />
       <Search />
     </Box>

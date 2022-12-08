@@ -20,19 +20,22 @@ const Search = () => {
       flexDirection={["column", "column", "column"]}
       alignItems={["center", "center", "center"]}
       justifyContent="center"
-      color="#fff"
+      color="#000"
       pt="10rem"
     >
       {/*------------------Logo and Label Container----------------- */}
-      
+
       <Stack
+        display='flex'
+        justifyContent='center'
         flexDirection={["column", "column", "column", "row"]}
         alignItems="center"
         mb={["30px", "20px", "40px", "20px"]}
+        w='100%'
       >
-        <Image pr="10px" src={searchLogo} alt="search-logo" />
+        <Image pr="5px" src={searchLogo} alt="search-logo" />
 
-        <Heading fontWeight="400" size={["lg", "2xl", "lg", "3xl"]}>
+        <Heading fontWeight="400" color='#ddd' size={["lg", "2xl", "lg", "3xl"]}>
           Dilediğin Restorani Seç
         </Heading>
       </Stack>
@@ -44,12 +47,11 @@ const Search = () => {
           <Input
             type="text"
             placeholder="Sehir , Restoran , Mutfak ara...."
-            focusBorderColor="orange.300"
-            borderColor={"orange"}
+            _placeholder={{ color: "#ddd" }}
             fontSize={["12px", "15px", "16px"]}
           />
           <InputRightElement width={["2.5rem", "5.5rem", "4.5rem"]}>
-            <FaSearch fontSize="18px" cursor="pointer" />
+            <FaSearch fontSize="18px" cursor="pointer" color="#fff"/>
           </InputRightElement>
         </InputGroup>
 
@@ -66,38 +68,23 @@ const Search = () => {
             placeholder="Select Date and Time"
             size="md"
             type="datetime-local"
-            focusBorderColor="orange.300"
-            borderColor={"orange"}
             fontSize={"12px"}
+            color='#ddd'
           />
 
           {/*---------------Hotel,Restaurant Money input------------------ */}
 
           <InputGroup w={["100%", "100%", "120px", "120px"]}>
-            <Input
-              pr="2.5rem"
-              type="text"
-              maxLength={6}
-              focusBorderColor="orange.300"
-              borderColor={"orange"}
-              fontSize={"16px"}
-            />
+            <Input pr="2.5rem" type="text" maxLength={6} fontSize={"16px"} />
             <InputRightElement width="2.5rem">
-              <FaDollarSign color="greenyellow" />
+              <FaDollarSign color="#00e600" />
             </InputRightElement>
           </InputGroup>
 
           {/*---------------Hotel,Restaurant Stars input------------------ */}
 
           <InputGroup w={["100%", "100%", "100px", "100px"]}>
-            <Input
-              pr="2.5rem"
-              type="text"
-              maxLength={1}
-              focusBorderColor="orange.300"
-              borderColor={"orange"}
-              fontSize={"16px"}
-            />
+            <Input pr="2.5rem" type="text" maxLength={1} fontSize={"16px"} />
             <InputRightElement width="2.5rem">
               <FaStar color="yellow" />
             </InputRightElement>
@@ -107,11 +94,12 @@ const Search = () => {
 
           <IconButton
             w={["100%", "100%", "30%", "30%"]}
-            bg="orange.600"
+            bg='rgb(248, 179, 51)'
             aria-label="Filtrele"
             fontSize="2xl"
-            _hover={{ bg: "orangered", color: "#ddd" }}
-            icon={<IoMdOptions cursor="pointer" />}
+            _hover={{bg : 'orangered'}}
+            
+            icon={<IoMdOptions color="#fff" cursor="pointer" />}
           />
         </Flex>
       </Box>
