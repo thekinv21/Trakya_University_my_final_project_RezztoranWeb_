@@ -34,11 +34,13 @@ const Navbar = () => {
       >
         {/*---------------------------Logo ------------------------ */}
 
-        <Image
-          w={["60px", "60px", "80px", "90px"]}
-          src={searchLogo}
-          cursor="pointer"
-        />
+        <Link href={'./landing'}>
+          <Image
+            w={["60px", "60px", "80px", "90px"]}
+            src={searchLogo}
+            cursor="pointer"
+          />
+        </Link>
 
         {/*---------------------------Rezztoran ------------------------ */}
 
