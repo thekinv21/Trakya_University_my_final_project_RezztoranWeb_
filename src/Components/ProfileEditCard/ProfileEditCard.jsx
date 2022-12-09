@@ -32,7 +32,7 @@ const ProfileEditCard = () => {
           bg="#fff"
           color="#000"
           boxShadow="rgb(51 51 51 / 10%) 0px 1px 4px"
-          minW={["425px", "495px", "440px", "570px"]}
+          minW={["320px", "495px", "440px", "570px"]}
           maxW={["340px", "340px", "340px", "570px"]}
           h={["500px", "600px", "500px", "500px"]}
           p="16px"
@@ -161,7 +161,7 @@ const ProfileEditCard = () => {
         <Card
           bg="#fff"
           boxShadow="rgb(51 51 51 / 10%) 0px 1px 4px"
-          minW={["425px", "495px", "440px", "570px"]}
+          minW={["320px", "495px", "440px", "570px"]}
           maxW={["340px", "100%", "340px", "570px"]}
           h={["100px", "100px", "100px", "100px"]}
           textAlign="center"
