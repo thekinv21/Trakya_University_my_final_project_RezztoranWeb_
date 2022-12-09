@@ -17,10 +17,9 @@ const ProfileCard = () => {
     <Card
       bg="#fff"
       boxShadow="rgb(51 51 51 / 10%) 0px 1px 4px"
-      minW="290px"
+      minW="320px"
       maxW="300px"
       h="500px"
-      borderRadius="10px"
       p="30px 0px"
     >
       <Flex
@@ -46,7 +45,7 @@ const ProfileCard = () => {
           <UnorderedList key={index} listStyleType="none">
             <Link
               href={cardLink.href}
-              borderTop="0.5px solid #979797"
+              borderTop="0.5px solid #c1c1c1"
               display="flex"
               alignItems="center"
               p="12px 4px"
