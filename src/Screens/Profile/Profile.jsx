@@ -15,7 +15,7 @@ const Profile = () => {
         bgImage={Background}
         bgColor="#B2BEB5"
         maxW="100vw"
-        h="100vh"
+        h="1080px"
         p="0px 20%"
         position="relative"
         zIndex="0"
