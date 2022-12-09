@@ -135,7 +135,9 @@ const ProfileEditCard = () => {
           <Stack textAlign="start" w="100%" p="16px">
             <Button
               colorScheme={"blackAlpha"}
-              fontSize="14px"
+              color="#fff"
+              fontWeight="regular"
+              fontSize="16px"
               w="200px"
               disabled
             >
@@ -163,21 +165,20 @@ const ProfileEditCard = () => {
           boxShadow="rgb(51 51 51 / 10%) 0px 1px 4px"
           minW={["320px", "495px", "440px", "570px"]}
           maxW={["340px", "100%", "340px", "570px"]}
-          h={["100px", "100px", "100px", "100px"]}
+          h={["100px", "100px", "100px", "140px"]}
           textAlign="center"
           display="flex"
+          alignItems="flex-start"
           justifyContent="center"
-          alignItems="start"
-          pl="40px"
+          p='0px 30px'
         >
           <Button
             w="220px"
             bg="rgb(248, 179, 51)"
-            borderRadius="8px"
             color="#fff"
-            fontWeight="bold"
-            fontSize="14px"
-            _hover={{ color: "rgb(0,0,0,0.5)" }}
+            fontWeight="regular"
+            fontSize="16px"
+            _hover={{ color: "#ddd" }}
           >
             Parolayi Değiştir
           </Button>
