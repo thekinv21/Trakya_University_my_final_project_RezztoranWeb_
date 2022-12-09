@@ -4,6 +4,7 @@ import SignIn from "../Screens/Login/SignIn/SignIn"
 import SignUp from "../Screens/Login/SignUp/SignUp";
 import Landing from './../Screens/Landing/Landing';
 import Profile from './../Screens/Profile/Profile';
+import Reservations from "../Screens/Reservations/Reservations";
 
 const Routers = () => {
   return (
@@ -15,6 +16,7 @@ const Routers = () => {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/landing" element={<Landing />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/reservations" element={<Reservations />} />
         </Routes>
       </BrowserRouter>
     </>
