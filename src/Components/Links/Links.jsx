@@ -6,9 +6,8 @@ import {
   FaSignOutAlt,
   FaHome,
   FaAddressCard,
-  FaComment
+  FaComment,
 } from "react-icons/fa";
-
 
 //---------------------Header Links-----------------------
 
@@ -29,7 +28,6 @@ export const HeaderWebLinks = [
     icon: <BiRestaurant fontSize="16px" />,
   },
 ];
-
 
 //------------------- Navbar Links----------------------
 export const NavbarMenuLinks = [
@@ -60,11 +58,10 @@ export const NavbarMenuLinks = [
   },
 ];
 
-
 //-------------------Profile Card Links----------------------
 export const ProfileMenuLinks = [
   {
-    name: "Restoranlar",
+    name: "Rezervasyonlar",
     href: "#",
     icon: <BiRestaurant fontSize="18px" />,
   },
