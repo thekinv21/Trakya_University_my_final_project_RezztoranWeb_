@@ -1,46 +1,35 @@
 [
-    {
-        "id": 0,
-        "title": "Elit Restorant",
-        "imgURL": "https://www.thegalataistanbul.com/wp-content/uploads/sites/73/2021/03/Mesai7-1500x999.jpg",
-        "numberOfPeople":"2",
-        "comment": "Cam kenarı olsun",
-        "Date": "Tarih: 12/12/2022 Saat: 16.30",
-        "star": 1,
-        "price": 3,
-        "liked": false
-    },
-    {
-        "id": 1,
-        "title": "Osteria Francescana",
-        "imgURL": "https://www.mewithmysuitcase.com/wp-content/uploads/2019/03/OsteriaFrancescana28529.jpg",
-        "numberofPeople":"2",
-        "comment": "Girişe yakın olsun",
-        "Date": "Tarih:26/03/2023 Saat: 21.30",
-        "star": 4.5,
-        "price": 1,
-        "liked": false
-    },
-    {
-        "id": 2,
-        "title": "Mikla",
-        "imgURL": "https://i.lezzet.com.tr/images-xxlarge-secondary/michelin-yildizli-mikla-restoran-be986372-d507-45ea-b8d0-2cb85e2aa828",
-        "numberOfPeople":"2",
-        "comment": "Terasta yer ayırtmak istiyorum",
-        "Date": "Tarih: 01/02/2023 Saat: 14.00",
-        "star": 3.5,
-        "price": 5,
-        "liked": false
-    },
-    {
-        "id": 3,
-        "title": "Neolokal",
-        "imgURL": "https://lh3.googleusercontent.com/p/AF1QipMlOLvEGmMHQImIGH8oBlcCAO7XNw7e5_-Y474O=s680-w680-h510",
-        "numberOfPeople":"2",
-        "comment": "Cam kenarı olsun",
-        "Date": "Tarih: 15/01/2022 Saat: 18.00",
-        "star": 4,
-        "price": 2,
-        "liked": false
-    },
+  {
+    "id": 0,
+    "title": "Elit Restorant",
+    "imgURL": "https://www.thegalataistanbul.com/wp-content/uploads/sites/73/2021/03/Mesai7-1500x999.jpg",
+    "numberOfPeople": "2",
+    "comment": "Cam kenari olsun",
+    "Date": "12/12/2022 Saat: 16.30",
+    "star": 1,
+    "price": 3,
+    "liked": false
+  },
+  {
+    "id": 1,
+    "title": "Osteria Francescana",
+    "imgURL": "https://www.mewithmysuitcase.com/wp-content/uploads/2019/03/OsteriaFrancescana28529.jpg",
+    "numberofPeople": "4",
+    "comment": "Girişe yakin olsun",
+    "Date": "26/03/2023 Saat: 21.30",
+    "star": 4.5,
+    "price": 1,
+    "liked": false
+  },
+  {
+    "id": 2,
+    "title": "Mikla",
+    "imgURL": "https://media.istockphoto.com/id/1018141890/photo/two-empty-wine-glasses-sitting-in-a-restaurant-on-a-warm-sunny-afternoon.jpg?s=612x612&w=0&k=20&c=OccJv1oKWSTDqJ6Irw7iW1NEbL0muU2ylqP3EOhOyEg=",
+    "numberOfPeople": "2",
+    "comment": "Terasta yer airtmak istiyorum",
+    "Date": "01/02/2023 Saat: 14.00",
+    "star": 3.5,
+    "price": 5,
+    "liked": false
+  }
 ]
