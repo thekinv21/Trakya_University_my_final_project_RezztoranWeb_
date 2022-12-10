@@ -46,17 +46,17 @@ const Header = () => {
       >
         {/*---------------------------Hamburger Menu When Window was Mobile Responsive------------------------ */}
         <IconButton
-          size="md"
+          size="lg"
           icon={isOpen ? <CloseIcon /> : <HamburgerIcon fontSize="19px" />}
           display={{ md: "none" }}
           onClick={isOpen ? onClose : onOpen}
-          bg="gray.500"
-          borderRadius="50%"
           color="#ddd"
-          _hover={{ bg: "orange" }}
+          bg="gray.600"
+          borderRadius="50%"
+          _hover={{ bg: "gray.700" }}
         />
 
-        {/*---------------------------Rezztoran Logo ------------------------ */}
+        {/*-------------------------------Rezztoran Logo ------------------------ */}
 
         <Image
           w={["130px", "160px", "160px", "220px"]}
@@ -64,7 +64,7 @@ const Header = () => {
           cursor="pointer"
         />
 
-        {/*--------------------------Header and Menu Links---------------------- */}
+        {/*------------------------------Header Links----------------------------- */}
         <Flex alignItems="center">
           <HStack spacing={8} alignItems={"center"}>
             <HStack
@@ -100,7 +100,7 @@ const Header = () => {
             </HStack>
           </HStack>
 
-          {/*--------------------------User Logo and Menu Links----------------------- */}
+          {/*------------------------------User Logo and Links------------------------- */}
 
           <Menu>
             <MenuButton>
