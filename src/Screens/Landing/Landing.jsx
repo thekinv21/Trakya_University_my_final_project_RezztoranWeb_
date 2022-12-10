@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Stack, Box } from "@chakra-ui/react";
 import Header from "../../Components/Header/Header";
-import Search from "../../Components/Search/Search";
+import Filter from '../../Components/Filter/Filter'
 import Background from "../../Assets/images/Background.png";
 import RestoransList from "../../Components/RestoransList/RestoransList";
 import AboutUs from "../../Components/AboutUs/AboutUs";
@@ -20,7 +20,7 @@ const Landing = () => {
         overflowY="hidden"
       >
         <Stack spacing={20} direction="column" pt="8rem" h="auto">
-          <Search />
+          <Filter />
           <RestoransList />
           <AboutUs />
           <Quetions />
