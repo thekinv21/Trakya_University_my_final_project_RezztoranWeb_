@@ -55,10 +55,7 @@ const ProfileCard = () => {
                 color: "#FAC050",
               }}
             >
-              <ListItem pr="10px" color="rgba(0,0,0,0.7)">
-                {" "}
-                {cardLink.icon}
-              </ListItem>
+              <ListItem pr="10px"> {cardLink.icon}</ListItem>
               <ListItem fontWeight="300">{cardLink.name}</ListItem>
             </Link>
           </UnorderedList>
