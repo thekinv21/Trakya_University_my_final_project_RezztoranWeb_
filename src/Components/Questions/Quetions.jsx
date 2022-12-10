@@ -17,7 +17,6 @@ const Quetions = () => {
       <Accordion
         allowToggle
         bg="#fff"
-        borderRadius="16px"
         w={["350px", "400px", "500px", "800px"]}
       >
         <AccordionItem>
