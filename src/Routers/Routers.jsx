@@ -5,6 +5,7 @@ import SignUp from "../Screens/Login/SignUp/SignUp";
 import Landing from './../Screens/Landing/Landing';
 import Profile from './../Screens/Profile/Profile';
 import Reservations from "../Screens/Reservations/Reservations";
+import Discover from './../Screens/Discover/Discover';
 
 const Routers = () => {
   return (
@@ -17,6 +18,7 @@ const Routers = () => {
           <Route path="/landing" element={<Landing />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/reservations" element={<Reservations />} />
+          <Route path="/discover" element={<Discover />} />
         </Routes>
       </BrowserRouter>
     </>
