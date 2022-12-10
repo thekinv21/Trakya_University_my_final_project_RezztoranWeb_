@@ -137,7 +137,7 @@ const ProfileEditCard = () => {
               colorScheme={"blackAlpha"}
               color="#fff"
               fontWeight="regular"
-              fontSize="16px"
+              fontSize="14px"
               w="200px"
               disabled
             >
@@ -170,15 +170,15 @@ const ProfileEditCard = () => {
           display="flex"
           alignItems="flex-start"
           justifyContent="center"
-          p='0px 30px'
+          p="0px 30px"
         >
           <Button
             w="220px"
             bg="rgb(248, 179, 51)"
             color="#fff"
             fontWeight="regular"
-            fontSize="16px"
-            _hover={{ color: "#ddd" }}
+            fontSize="14px"
+            _hover={{ bg: "orange" }}
           >
             Parolayi Değiştir
           </Button>
