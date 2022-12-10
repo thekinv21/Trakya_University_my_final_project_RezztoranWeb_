@@ -10,13 +10,29 @@ import {
   MenuItem,
   Image,
   Text,
+  IconButton,
+  useDisclosure,
+  HStack,
+  Box,
+  Stack,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerOverlay,
+  DrawerHeader,
+  DrawerCloseButton,
 } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import User from "../../Assets/images/user1.png";
 import RezztoranLogo from "../../Assets/Svg/REZZ.svg";
 import searchLogo from "../../Assets/Svg/searchLogo.svg";
-import { NavbarMenuLinks } from "../../Components/Links/Links";
+import {
+  NavbarMenuLinks,
+  ProfileMenuLinks,
+} from "../../Components/Links/Links";
 
 const Navbar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Fragment>
       <Flex
@@ -32,9 +48,21 @@ const Navbar = () => {
         boxShadow="0 -1px 6px -1px rgba(0, 0, 0, 0.1)"
         zIndex="999"
       >
+        {/*---------------------------Hamburger Menu When Window was Mobile Responsive------------------------ */}
+        <IconButton
+          size="lg"
+          icon={isOpen ? <CloseIcon /> : <HamburgerIcon fontSize="22px" />}
+          display={["block", "block", "block", "none"]}
+          onClick={isOpen ? onClose : onOpen}
+          borderRadius="50%"
+          color="#ddd"
+          bg="gray.600"
+          _hover={{ bg: "gray.700" }}
+        />
+
         {/*---------------------------Logo ------------------------ */}
 
-        <Link href={'./landing'}>
+        <Link href={"./landing"} display={["none", "none", "none", "block"]}>
           <Image
             w={["60px", "60px", "80px", "90px"]}
             src={searchLogo}
@@ -89,6 +117,68 @@ const Navbar = () => {
             ))}
           </MenuList>
         </Menu>
+
+        {/*---------------------------Mobile Responsive Links and positions------------------------ */}
+        {isOpen ? (
+          <Box display={{ md: "none" }}>
+            <Drawer
+              isOpen={isOpen}
+              placement="left"
+              onClose={onClose}
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              justifyItems={"center"}
+            >
+              <DrawerOverlay />
+              <DrawerContent bg="#36454F" w="100%" h="100%" alignItems="center">
+                <DrawerCloseButton color="#fff" />
+
+                <DrawerHeader cursor="pointer">
+                  <Link href="/landing">
+                    <Image src={searchLogo} />
+                  </Link>
+                </DrawerHeader>
+
+                <DrawerBody>
+                  <Stack
+                    w="100%"
+                    h="100%"
+                    direction="column"
+                    alignItems={"center"}
+                    justifyContent="center"
+                    spacing="8"
+                  >
+                    {ProfileMenuLinks.map((mobileLink, index) => (
+                      <HStack
+                        key={index}
+                        color="#fff"
+                        _hover={{
+                          textDecoration: "none",
+                          p: "5px 40px",
+                          borderRadius: "5px",
+                          transition: "all 0.5s",
+                          bgGradient: "linear(to-r, red.500, yellow.500)",
+                        }}
+                      >
+                        <Text>{mobileLink.icon}</Text>
+
+                        <Link
+                          href={mobileLink.href}
+                          _hover={{
+                            textDecoration: "none",
+                          }}
+                        >
+                          {mobileLink.name}
+                        </Link>
+                      </HStack>
+                    ))}
+                  </Stack>
+                </DrawerBody>
+              </DrawerContent>
+            </Drawer>
+          </Box>
+        ) : null}
       </Flex>
     </Fragment>
   );
