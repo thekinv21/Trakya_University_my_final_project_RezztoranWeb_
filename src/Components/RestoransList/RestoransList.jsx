@@ -80,10 +80,12 @@ const RestoransList = () => {
               cursor="pointer"
               bg="#ddd"
             >
-              {/*-----------------------------------------Restorants Image---------------------------------------------- */}
+              {/*-----------------------------------------Restorants Image and Location---------------------------------------------- */}
               <Image
                 w="400px"
                 maxW="100%"
+                h="210px"
+                maxH="100%"
                 src={restoran.imgURL}
                 alt={restoran.title}
               />
@@ -100,8 +102,8 @@ const RestoransList = () => {
                     textTransform="uppercase"
                     ml="2"
                   >
-                    Location : {restoran.city} &nbsp; &nbsp; Stars :{" "}
-                    {restoran.star}
+                    Location : {restoran.city} &nbsp; &nbsp; District :
+                    {restoran.district}
                   </Box>
                 </Box>
 
@@ -117,12 +119,8 @@ const RestoransList = () => {
                   Restaurant : &nbsp; {restoran.title}
                 </Box>
 
-                <Text fontSize="small">
-                  Category : &nbsp;{restoran.category}
-                </Text>
-
-                <Text fontSize="xs">
-                  Most Rated : &nbsp; &nbsp;{restoran.price}
+                <Text fontSize="xs" p="5px">
+                  Adress : &nbsp; &nbsp;{restoran.detailedAddress}
                 </Text>
 
                 <Box display="flex" mt="2" alignItems="center">
