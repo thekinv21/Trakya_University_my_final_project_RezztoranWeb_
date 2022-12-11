@@ -52,22 +52,23 @@ const ReservationCard = () => {
           {/*----------------------------------------Reservation Card---------------------------------- */}
           {reserved.map((reservedRestaurant) => (
             <Card
-              w={["350px", "480px", "630px", "700px"]}
+              w={["300px", "480px", "630px", "700px"]}
               direction={{ base: "column", sm: "row" }}
               overflow="hidden"
-              bg="#fff"
+              bg="#ddd"
               key={reservedRestaurant.id}
               alignItems="center"
-              justifyContent="space-evenly"
+              variant="elevated"
             >
               <Image
                 objectFit="cover"
-                w={["250px", "160px", "270px", "330px"]}
+                w={["250px", "260px", "270px", "330px"]}
                 src={reservedRestaurant.imgURL}
                 alt={reservedRestaurant.title}
                 h="200px"
                 maxH="200px"
                 borderRadius="10px"
+                ml="15px"
               />
 
               <Stack>
@@ -95,6 +96,7 @@ const ReservationCard = () => {
                       {reservedRestaurant.Date}
                     </Badge>
                   </Heading>
+
                   {/*--------------------------Reserve Edilen Rest Kişi Sayısı ------------------------*/}
                   <Heading size="xs" pt="10px">
                     Persons :{" "}
