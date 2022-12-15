@@ -70,6 +70,7 @@ const RestoransList = () => {
         <Slider {...sliderSettings}>
           {resData.map((restoran) => (
             <Box
+              userSelect="none"
               w="200px"
               maxW="350px"
               h={["320px", "400px", "400px", "400px"]}
@@ -78,7 +79,7 @@ const RestoransList = () => {
               overflow="hidden"
               key={restoran.id}
               cursor="pointer"
-              bg="#ddd"
+              bg="#fff"
             >
               {/*-----------------------------------------Restorants Image and Location---------------------------------------------- */}
               <Image
@@ -123,16 +124,25 @@ const RestoransList = () => {
                   Adress : &nbsp; &nbsp;{restoran.detailedAddress}
                 </Text>
 
-                <Box display="flex" mt="2" alignItems="center">
-                  {Array(5)
-                    .fill("")
-                    .map((_, i) => (
-                      <StarIcon
-                        key={i}
-                        color={i < restoran.star ? "teal.500" : "gray.300"}
-                      />
-                    ))}
-                </Box>
+                <Stack
+                  direction="row"
+                  alignItems="center"
+                  justifyContent="space-between"
+                >
+                  <Text pl="10px" fontSize="xs" pt="5px">
+                    Stars :{" "}
+                  </Text>
+                  <Box display="flex" mt="2" alignItems="center">
+                    {Array(5)
+                      .fill("")
+                      .map((_, i) => (
+                        <StarIcon
+                          key={i}
+                          color={i < restoran.star ? "teal.500" : "gray.300"}
+                        />
+                      ))}
+                  </Box>
+                </Stack>
               </Box>
             </Box>
           ))}
