@@ -8,7 +8,7 @@ import {
   Image,
   Text,
   Code,
-  Button,
+  Link,
 } from "@chakra-ui/react";
 import axios from "axios";
 
@@ -71,17 +71,20 @@ const DiscoverRestorans = () => {
             </CardBody>
 
             <CardBody textAlign="end">
-              <Button
+              <Link
+                href={`#`}
+                p='10px 25px'
+                textAlign='center'
+                bg="rgb(248, 179, 51)"
                 borderRadius="10px"
-                colorScheme="green"
                 fontWeight="regular"
                 fontSize="14px"
-                m="12px 0px"
+                color='#fff'
               >
                 Masa Ayir
-              </Button>
+              </Link>
 
-              <Text fontSize="12px">
+              <Text fontSize="12px" mt='10px'>
                 Değerlendirme : {restaurants.most_rated}
               </Text>
             </CardBody>
