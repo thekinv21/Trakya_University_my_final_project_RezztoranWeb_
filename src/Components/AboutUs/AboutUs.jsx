@@ -14,7 +14,7 @@ const AboutUs = () => {
         w="300px"
         h="230px"
         maxW="100%"
-        bg="#ddd"
+        bg="#fff"
         borderRadius="10px"
         boxShadow="rgb(51 51 51 / 10%) 0px 1px 4px"
         alignItems={"center"}
