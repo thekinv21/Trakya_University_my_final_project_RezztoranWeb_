@@ -1,12 +1,13 @@
 import React, { Fragment } from "react";
 import { Stack, Box } from "@chakra-ui/react";
 import Header from "../../Components/Header/Header";
-import Filter from '../../Components/Filter/Filter'
 import Background from "../../Assets/images/Background.png";
 import RestoransList from "../../Components/RestoransList/RestoransList";
 import AboutUs from "../../Components/AboutUs/AboutUs";
 import Footer from "../../Common/Footer/Footer";
 import Quetions from "../../Components/Questions/Quetions";
+import Banner from "../../Components/Banner/Banner";
+
 const Landing = () => {
   return (
     <Fragment>
@@ -15,12 +16,12 @@ const Landing = () => {
         maxW="100vw"
         minH="1400px"
         maxH="auto"
-        bgColor="#B2BEB5"
+        bgColor="#ddd"
         bgImage={Background}
         overflowY="hidden"
       >
-        <Stack spacing={20} direction="column" pt="8rem" h="auto">
-          <Filter />
+        <Stack spacing={20} direction="column" h="auto">
+          <Banner />
           <RestoransList />
           <AboutUs />
           <Quetions />
