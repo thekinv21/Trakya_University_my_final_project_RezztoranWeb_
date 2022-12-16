@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Flex,
@@ -28,6 +28,18 @@ import RezztoranLogo from "../../Assets/Svg/REZZ.svg";
 import { HeaderWebLinks, NavbarMenuLinks } from "../Links/Links";
 
 const Header = () => {
+  const [active, setActive] = useState(true);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setActive(false);
+    } else {
+      setActive(true);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <Box>
@@ -40,7 +52,7 @@ const Header = () => {
         w="100%"
         top="0px"
         left="0px"
-        bg="#36454F"
+        bg={active ? "transparent" : "rgba(21, 21, 21, 1)"}
         boxShadow="0 -1px 6px -1px rgba(0, 0, 0, 0.1)"
         zIndex="999"
       >
