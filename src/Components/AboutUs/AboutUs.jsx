@@ -44,7 +44,7 @@ const AboutUs = () => {
   return (
     <Fragment>
       <Stack w="100%" textAlign="center" spacing="14" alignItems="center">
-        <Heading color="rgb(0,0,0,0.6)" fontWeight="600">
+        <Heading color="rgb(0,0,0,0.6)" fontWeight="600" fontFamily={'"Kaushan Script", cursive'}>
           SAĞLADIĞI KOLAYLIKLAR
         </Heading>
 

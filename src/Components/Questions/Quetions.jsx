@@ -55,7 +55,7 @@ const Quetions = () => {
         alignItems="center"
         pb="100px"
       >
-        <Heading color="rgb(0,0,0,0.6)" fontWeight="600">
+        <Heading color="rgb(0,0,0,0.6)" fontWeight="600" fontFamily={'"Kaushan Script", cursive'}>
           SIKLIKÇA SORULANLAR
         </Heading>
 

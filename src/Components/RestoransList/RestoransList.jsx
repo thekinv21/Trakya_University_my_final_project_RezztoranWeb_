@@ -1,13 +1,23 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Box, Badge, Image, Stack, Text, Heading } from "@chakra-ui/react";
+import {
+  Box,
+  Badge,
+  Image,
+  Stack,
+  Text,
+  Heading,
+  Button,
+} from "@chakra-ui/react";
 import { StarIcon } from "@chakra-ui/icons";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useNavigate } from "react-router-dom";
 
 const RestoransList = () => {
   const [resData, setresData] = useState([]);
+  const usenavigate = useNavigate();
 
   //----------------------------------Check data with Axios-----------------------------------
   useEffect(() => {
@@ -61,7 +71,11 @@ const RestoransList = () => {
 
   return (
     <Stack w="100%" textAlign="center" spacing="12">
-      <Heading color="rgb(0,0,0,0.6)" fontWeight="600">
+      <Heading
+        color="rgb(0,0,0,0.6)"
+        fontWeight="600"
+        fontFamily={'"Kaushan Script", cursive'}
+      >
         POPÜLER RESTORANLAR
       </Heading>
 
@@ -73,7 +87,7 @@ const RestoransList = () => {
               userSelect="none"
               w="200px"
               maxW="350px"
-              h={["320px", "400px", "400px", "400px"]}
+              h={["490px", "450px", "450px", "450px"]}
               borderWidth="1px"
               borderRadius="lg"
               overflow="hidden"
@@ -143,6 +157,17 @@ const RestoransList = () => {
                       ))}
                   </Box>
                 </Stack>
+
+                <Button
+                  fontWeight="regular"
+                  fontSize="14px"
+                  w="100%"
+                  m="20px 0px 10px 0px"
+                  colorScheme="green"
+                  onClick={() => (usenavigate('#'))}
+                >
+                  Rezervasyon Yap
+                </Button>
               </Box>
             </Box>
           ))}

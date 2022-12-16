@@ -30,7 +30,7 @@ const Discover = () => {
           direction={["column", "column", "column", "row"]}
           justifyContent={["center", "center", "center", "center"]}
         >
-          <Box display={["none", "none", "none", "block"]}>
+          <Box display={["none", "none", "none", 'none', "block"]}>
             <DiscoverFilter />
           </Box>
 

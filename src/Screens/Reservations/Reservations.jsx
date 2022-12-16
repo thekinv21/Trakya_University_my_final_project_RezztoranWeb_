@@ -13,11 +13,10 @@ const Reservations = () => {
 
       <Box
         bgImage={Background}
-        bgColor="#B2BEB5"
+        bgColor="#ddd"
         maxW="100vw"
         minH="100vh"
         maxH="auto"
-        p="8% 20%"
         position="relative"
         zIndex="0"
       >
@@ -27,10 +26,11 @@ const Reservations = () => {
           spacing={12}
           direction={["column", "column", "column", "row"]}
           alignItems={["center", "center", "center", "center"]}
-          justifyContent={["center", "center", "center", "start"]}
+          justifyContent={["center", "center", "center", "center"]}
+          pt='100px'
         >
           {/*------------------------Profile Card Component-------------------------- */}
-          <Box display={["none", "none", "none", "block"]}>
+          <Box display={["none", "none", "none", "none", "block"]}>
             <ProfileCard />
           </Box>
 

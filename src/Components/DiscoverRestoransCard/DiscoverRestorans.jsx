@@ -4,16 +4,18 @@ import {
   Card,
   Heading,
   CardBody,
-  Flex,
   Image,
   Text,
   Code,
-  Link,
+  CardFooter,
+  Button,
 } from "@chakra-ui/react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const DiscoverRestorans = () => {
   const [discoverRestorants, setDiscover] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function getRestaurants() {
@@ -29,66 +31,86 @@ const DiscoverRestorans = () => {
 
   return (
     <Stack spacing={4}>
-      {discoverRestorants.map((restaurants) => (
+      {discoverRestorants.map((restaurant) => (
         <Card
           direction={{ base: "column", sm: "row" }}
-          overflow="hidden"
-          variant="elevated"
-          size="lg"
           bg="#fff"
-          key={restaurants.id}
+          key={restaurant.id}
         >
           <Image
             objectFit="cover"
-            maxW={{ base: "100%", sm: "250px" }}
-            src={restaurants.imgURL}
-            alt={restaurants.title}
+            w={["330px", "250px", "200px", "250px"]}
+            src={restaurant.imgURL}
+            alt={restaurant.title}
           />
 
-          <Flex
-            justifyContent="space-between"
-            w="100%"
-            alignItems="center"
-            h="100%"
-          >
+          <Stack>
             <CardBody>
-              <Heading fontWeight="bold" fontSize="25px">
-                {restaurants.title}
-              </Heading>
+              <Heading size="md">{restaurant.title}</Heading>
 
-              <Text m="10px 0px" fontSize="16px">
-                {restaurants.city}
-              </Text>
-              <Text fontSize="12px" m="10px 0px">
-                {restaurants.district}
+              <Text fontSize="small">
+                <Code
+                  children="City:"
+                  mr="10px"
+                  colorScheme={"orange"}
+                  mt="10px"
+                />
+                {restaurant.city}
               </Text>
 
-              <Code
-                children={restaurants.category}
-                borderRadius="5px"
-                fontSize="12px"
-              />
+              <Text fontSize="small">
+                <Code
+                  children="District:"
+                  mr="10px"
+                  colorScheme={"orange"}
+                  mt="10px"
+                />
+                {restaurant.district}
+              </Text>
+
+              <Text py="2" fontSize="small">
+                <Code children="Address:" mr="10px" colorScheme={"orange"} />
+                {restaurant.detailedAddress}
+              </Text>
+
+              <Text fontSize="small">
+                <Code children="Category:" mr="10px" colorScheme={"orange"} />
+                {restaurant.category}
+              </Text>
+
+              <Text fontSize="small">
+                <Code
+                  children="Most Rated:"
+                  mr="10px"
+                  colorScheme={"orange"}
+                  mt="10px"
+                />
+                {restaurant.most_rated}
+              </Text>
+
+              <Text fontSize="small">
+                <Code
+                  children="Star:"
+                  mr="10px"
+                  colorScheme={"orange"}
+                  mt="10px"
+                />
+                {restaurant.star}
+              </Text>
             </CardBody>
 
-            <CardBody textAlign="end">
-              <Link
-                href={`#`}
-                p='10px 25px'
-                textAlign='center'
-                bg="rgb(248, 179, 51)"
-                borderRadius="10px"
+            <CardFooter p="0px 0px 20px 15px" alignItems="start">
+              <Button
+                colorScheme="green"
+                fontSize="small"
                 fontWeight="regular"
-                fontSize="14px"
-                color='#fff'
+                w="130px"
+                onClick={() => (navigate('#'))}
               >
-                Masa Ayir
-              </Link>
-
-              <Text fontSize="12px" mt='10px'>
-                Değerlendirme : {restaurants.most_rated}
-              </Text>
-            </CardBody>
-          </Flex>
+                Masa Ayirt
+              </Button>
+            </CardFooter>
+          </Stack>
         </Card>
       ))}
     </Stack>

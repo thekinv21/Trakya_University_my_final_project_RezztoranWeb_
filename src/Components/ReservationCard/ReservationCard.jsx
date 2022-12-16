@@ -41,34 +41,31 @@ const ReservationCard = () => {
       {reserved.length > 0 ? (
         <Stack direction="column" spacing="4">
           <Heading>
-            <Badge
-              fontSize={["16px", "16px", "20px", "20px"]}
-              colorScheme="blackAlpha"
-            >
-              Yaklaşan Rezervasyonlarim ({reserved.length})
+            <Badge fontSize={["16px", "16px", "20px", "20px"]}>
+              Yaklaşan Rezervasyonlar ({reserved.length})
             </Badge>
           </Heading>
 
           {/*----------------------------------------Reservation Card---------------------------------- */}
           {reserved.map((reservedRestaurant) => (
             <Card
-              w={["300px", "480px", "630px", "700px"]}
+              w={["300px", "480px", "630px", "750px"]}
               direction={{ base: "column", sm: "row" }}
               overflow="hidden"
               bg="#fff"
               key={reservedRestaurant.id}
               alignItems="center"
               variant="elevated"
+              justifyContent="space-evenly"
             >
               <Image
                 objectFit="cover"
-                w={["250px", "260px", "270px", "330px"]}
+                w={["250px", "260px", "270px", "450px"]}
                 src={reservedRestaurant.imgURL}
                 alt={reservedRestaurant.title}
-                h="200px"
                 maxH="200px"
-                borderRadius="10px"
-                ml="15px"
+                borderRadius="5px"
+                m="15px"
               />
 
               <Stack>
