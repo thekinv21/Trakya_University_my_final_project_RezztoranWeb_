@@ -13,10 +13,9 @@ import { FaFacebook, FaTwitter, FaYoutube } from "react-icons/fa";
 import AppStore from "../../Assets/Svg/AppStore.svg";
 import GooglePlay from "../../Assets/Svg/GooglePlay.svg";
 
-
 const Footer = () => {
   return (
-    <Box     bg="#36454F" color="#fff" fontSize="14px">
+    <Box bg="rgba(21, 21, 21, 1)" color="#fff" fontSize="14px">
       <Container as={Stack} maxW={"6xl"} py={10}>
         <SimpleGrid
           columns={{ base: 1, sm: 2, md: 4 }}
@@ -53,7 +52,7 @@ const Footer = () => {
                 colorScheme={"facebook"}
                 rounded="100%"
                 icon={<FaFacebook />}
-                w='40px'
+                w="40px"
               />
               <IconButton
                 colorScheme={"twitter"}
