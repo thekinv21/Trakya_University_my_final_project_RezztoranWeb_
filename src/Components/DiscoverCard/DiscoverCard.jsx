@@ -103,7 +103,8 @@ const DiscoverCard = () => {
               <Input
                 borderLeftRadius="none"
                 fontSize="small"
-                placeholder="Price $ "
+                placeholder="Star "
+                maxLength={1}
               />
             </InputGroup>
           </Stack>
