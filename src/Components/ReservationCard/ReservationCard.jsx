@@ -55,7 +55,7 @@ const ReservationCard = () => {
               w={["300px", "480px", "630px", "700px"]}
               direction={{ base: "column", sm: "row" }}
               overflow="hidden"
-              bg="#ddd"
+              bg="#fff"
               key={reservedRestaurant.id}
               alignItems="center"
               variant="elevated"
