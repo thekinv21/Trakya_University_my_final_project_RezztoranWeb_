@@ -44,7 +44,7 @@ const Navbar = () => {
         w="100%"
         top="0px"
         left="0px"
-        bg="#36454F"
+        bg="rgba(21, 21, 21, 1)"
         boxShadow="0 -1px 6px -1px rgba(0, 0, 0, 0.1)"
         zIndex="999"
       >
@@ -55,8 +55,8 @@ const Navbar = () => {
           display={["block", "block", "block", "none"]}
           onClick={isOpen ? onClose : onOpen}
           borderRadius="50%"
-          color="#ddd"
-          bg="gray.600"
+          color="#fff"
+          bg="gray.800"
           _hover={{ bg: "gray.700" }}
         />
 
@@ -131,7 +131,7 @@ const Navbar = () => {
               justifyItems={"center"}
             >
               <DrawerOverlay />
-              <DrawerContent bg="#36454F" w="100%" h="100%" alignItems="center">
+              <DrawerContent   bg="rgba(21, 21, 21, 1)" w="100%" h="100%" alignItems="center">
                 <DrawerCloseButton color="#fff" />
 
                 <DrawerHeader cursor="pointer">
