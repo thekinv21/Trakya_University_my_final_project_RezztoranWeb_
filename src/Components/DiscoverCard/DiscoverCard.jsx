@@ -23,6 +23,8 @@ import {
   FcRating,
 } from "react-icons/fc";
 import axios from "axios";
+import { BiRestaurant } from "react-icons/bi";
+import { FaDollarSign, FaStar } from "react-icons/fa";
 
 const DiscoverCard = () => {
   const [favorite, setFavorite] = useState([]);
@@ -61,6 +63,51 @@ const DiscoverCard = () => {
             EDİRNE DAHİLİNDE RESTORANLAR
           </Heading>
         </CardHeader>
+
+        <CardBody>
+          <Heading
+            fontWeight="semibold"
+            fontSize="small"
+            mb="15px"
+            color="orange"
+          >
+            Filtrele :{" "}
+          </Heading>
+
+          <Stack direction={["column", "column", "column", "row"]} spacing="7">
+            {/*--------------------------------------Restaurant name vs--------------------------------- */}
+
+            <InputGroup>
+              <InputLeftAddon children={<BiRestaurant fontSize="18px" />} />
+
+              <Input
+                borderLeftRadius="none"
+                fontSize="small"
+                placeholder="Restaurant / Caffe "
+              />
+            </InputGroup>
+
+            <InputGroup>
+              <InputLeftAddon children={<FaDollarSign fontSize="18px" />} />
+
+              <Input
+                borderLeftRadius="none"
+                fontSize="small"
+                placeholder="Price $ "
+              />
+            </InputGroup>
+
+            <InputGroup>
+              <InputLeftAddon children={<FaStar fontSize="18px" />} />
+
+              <Input
+                borderLeftRadius="none"
+                fontSize="small"
+                placeholder="Price $ "
+              />
+            </InputGroup>
+          </Stack>
+        </CardBody>
 
         <CardBody>
           <Heading
@@ -124,7 +171,7 @@ const DiscoverCard = () => {
 
             <InputGroup>
               <Button
-                w="120px"
+                w="100%"
                 bg="rgb(248, 179, 51)"
                 color="#fff"
                 fontWeight="regular"
