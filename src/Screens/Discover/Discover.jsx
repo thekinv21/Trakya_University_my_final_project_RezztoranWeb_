@@ -3,9 +3,9 @@ import Navbar from "../../Common/Navbar/Navbar";
 import { Stack, Box } from "@chakra-ui/react";
 import Background from "../../Assets/images/Background.png";
 import Footer from "../../Common/Footer/Footer";
-import DiscoverCard from "./../../Components/DiscoverCard/DiscoverCard";
-import DiscoverFilter from "../../Components/DiscoverFilterCard/DiscoverFilter";
-import DiscoverRestorans from "../../Components/DiscoverRestoransCard/DiscoverRestorans";
+import DiscoverCard from "../../Components/Discover_Card/DiscoverCard";
+import DiscoverFilter from "../../Components/Discover_Filter_Card/DiscoverFilter";
+import DiscoverRestaurants from "../../Components/Discover_Restaurants_Card/DiscoverRestorans";
 
 const Discover = () => {
   return (
@@ -14,7 +14,7 @@ const Discover = () => {
 
       <Box
         bgImage={Background}
-        bgColor="#B2BEB5"
+        bgColor="#ddd"
         maxW="100vw"
         minH="100vh"
         maxH="auto"
@@ -30,14 +30,13 @@ const Discover = () => {
           direction={["column", "column", "column", "row"]}
           justifyContent={["center", "center", "center", "center"]}
         >
-          <Box display={["none", "none", "none", 'none', "block"]}>
+          <Box display={["none", "none", "none", "none", "block"]}>
             <DiscoverFilter />
           </Box>
 
           <Stack spacing={4}>
             <DiscoverCard />
-
-            <DiscoverRestorans />
+            <DiscoverRestaurants />
           </Stack>
         </Stack>
       </Box>
