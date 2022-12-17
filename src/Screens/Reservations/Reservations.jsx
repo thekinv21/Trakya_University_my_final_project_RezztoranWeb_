@@ -3,8 +3,8 @@ import Navbar from "../../Common/Navbar/Navbar";
 import { Stack, Box } from "@chakra-ui/react";
 import Background from "../../Assets/images/Background.png";
 import Footer from "../../Common/Footer/Footer";
-import ProfileCard from "./../../Components/ProfileCard/ProfileCard";
-import ReservationCard from "../../Components/ReservationCard/ReservationCard";
+import ProfileCard from "./../../Components/Profile_Card/ProfileCard";
+import ReservationsCard from "../../Components/Reservation_Card/ReservationCard";
 
 const Reservations = () => {
   return (
@@ -27,7 +27,7 @@ const Reservations = () => {
           direction={["column", "column", "column", "row"]}
           alignItems={["center", "center", "center", "center"]}
           justifyContent={["center", "center", "center", "center"]}
-          pt='100px'
+          pt="100px"
         >
           {/*------------------------Profile Card Component-------------------------- */}
           <Box display={["none", "none", "none", "none", "block"]}>
@@ -36,7 +36,7 @@ const Reservations = () => {
 
           {/*------------------------Reservations İnfo Card-------------------------- */}
           <Box>
-            <ReservationCard />
+            <ReservationsCard />
           </Box>
         </Stack>
       </Box>
