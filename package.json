@@ -24,7 +24,6 @@
     "yup": "^0.32.11"
   },
   "scripts": {
-    "start:server" : "json-server --watch src/Api/Data.json",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
