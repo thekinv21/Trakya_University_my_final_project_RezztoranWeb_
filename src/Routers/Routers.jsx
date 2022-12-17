@@ -6,6 +6,7 @@ import Landing from './../Screens/Landing/Landing';
 import Profile from './../Screens/Profile/Profile';
 import Reservations from "../Screens/Reservations/Reservations";
 import Discover from './../Screens/Discover/Discover';
+import Restaurant from './../Screens/Restaurant/Restaurant';
 
 const Routers = () => {
   return (
@@ -19,6 +20,7 @@ const Routers = () => {
           <Route path="/profile" element={<Profile />} />
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/discover" element={<Discover />} />
+          <Route path="/restaurant/:restaurant_id" element={<Restaurant />} />
         </Routes>
       </BrowserRouter>
     </>
