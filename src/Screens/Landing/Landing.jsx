@@ -2,11 +2,11 @@ import React, { Fragment } from "react";
 import { Stack, Box } from "@chakra-ui/react";
 import Header from "../../Components/Header/Header";
 import Background from "../../Assets/images/Background.png";
-import RestoransList from "../../Components/RestoransList/RestoransList";
-import AboutUs from "../../Components/AboutUs/AboutUs";
-import Footer from "../../Common/Footer/Footer";
-import Quetions from "../../Components/Questions/Quetions";
 import Banner from "../../Components/Banner/Banner";
+import AboutUs from "../../Components/AboutUs/AboutUs";
+import RestaurantSlider from "../../Components/Restaurants_Slider/RestoransList";
+import Quetions from "../../Components/User_Quetions_Card/Quetions";
+import Footer from "../../Common/Footer/Footer";
 
 const Landing = () => {
   return (
@@ -22,7 +22,7 @@ const Landing = () => {
       >
         <Stack spacing={20} direction="column" h="auto">
           <Banner />
-          <RestoransList />
+          <RestaurantSlider />
           <AboutUs />
           <Quetions />
         </Stack>
