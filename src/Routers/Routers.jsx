@@ -7,12 +7,14 @@ import Profile from './../Screens/Profile/Profile';
 import Reservations from "../Screens/Reservations/Reservations";
 import Discover from './../Screens/Discover/Discover';
 import Restaurant from './../Screens/Restaurant/Restaurant';
+import Error from "../Screens/Error/Error";
 
 const Routers = () => {
   return (
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="*" element={<Error/>}/>
           <Route path="/" element={<SignIn />} />
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
